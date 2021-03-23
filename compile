@@ -1,0 +1,7 @@
+#!/usr/bin/env -S scheme -q --eedisable --script
+
+(optimize-level 3)
+(debug-level 0)
+(let ([argl (command-line-arguments)])
+  (and (not (null? argl))
+       (compile-file (car argl))))
